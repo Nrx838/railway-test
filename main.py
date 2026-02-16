@@ -26,7 +26,7 @@ def chat_with_gemini(request: PromptRequest):
         raise HTTPException(status_code=500, detail="API Key not configured")
     
     try:
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-3-flash-preview')
         response = model.generate_content(request.text)
         return {"response": response.text}
     except Exception as e:
