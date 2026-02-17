@@ -6,15 +6,16 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request
 import google.generativeai as genai
 
-# --- Импорты MCP ---
-from mcp.server.fastapi import FastsseServerTransport
+# --- ИСПРАВЛЕННЫЙ ИМПОРТ ---
+# Было: from mcp.server.fastapi import FastsseServerTransport (Ошибка)
+# Стало: Используем стандартный SSE транспорт
+from mcp.server.sse import SseServerTransport
 from mcp.server import Server
 from mcp.types import (
     Tool,
     TextContent,
     ImageContent,
-    EmbeddedResource,
-    CallToolRequestSchema
+    EmbeddedResource
 )
 
 # --- Настройка Gemini и Redis ---
@@ -34,8 +35,6 @@ if redis_url:
 mcp_server = Server("flymyai-agent")
 
 # --- Определение Инструментов (Tools) ---
-# Мы говорим Cursor'у: "У меня есть инструмент, который умеет думать и помнить"
-
 @mcp_server.list_tools()
 async def list_tools() -> list[Tool]:
     return [
@@ -74,7 +73,6 @@ async def call_tool(name: str, arguments: dict) -> list[TextContent | ImageConte
     # --- Твоя логика (Gemini + Redis) ---
     session_key = f"mcp_chat:{session_id}"
     
-    # 1. Читаем историю
     history = []
     if r:
         raw_history = r.lrange(session_key, 0, -1)
@@ -84,7 +82,6 @@ async def call_tool(name: str, arguments: dict) -> list[TextContent | ImageConte
                 history.append({"role": msg["role"], "parts": [msg["text"]]})
             except: pass
 
-    # 2. Спрашиваем Gemini
     try:
         model = genai.GenerativeModel('gemini-3-flash-preview')
         chat = model.start_chat(history=history)
@@ -93,21 +90,18 @@ async def call_tool(name: str, arguments: dict) -> list[TextContent | ImageConte
     except Exception as e:
         return [TextContent(type="text", text=f"Error connecting to Gemini: {str(e)}")]
 
-    # 3. Сохраняем в память
     if r:
         r.rpush(session_key, json.dumps({"role": "user", "text": query}))
         r.rpush(session_key, json.dumps({"role": "model", "text": ai_text}))
-        r.expire(session_key, 86400) # 24 часа
+        r.expire(session_key, 86400)
 
     return [TextContent(type="text", text=ai_text)]
 
-# --- Настройка FastAPI для SSE (Transport) ---
-# Это нужно, чтобы сервер работал по протоколу, который понимает Cursor
-
+# --- Настройка FastAPI для SSE ---
 app = FastAPI()
 
-# Создаем SSE транспорт
-sse = FastsseServerTransport("/sse")
+# ИСПРАВЛЕНО: Используем SseServerTransport
+sse = SseServerTransport("/sse")
 
 @app.get("/sse")
 async def handle_sse(request: Request):
@@ -117,7 +111,7 @@ async def handle_sse(request: Request):
 
 @app.post("/messages")
 async def handle_messages(request: Request):
-    """Cursor отправляет сюда запросы (вызовы тулов)"""
+    """Cursor отправляет сюда запросы"""
     await sse.handle_post_message(request.scope, request.receive, request._send)
 
 if __name__ == "__main__":
