@@ -101,7 +101,7 @@ async def call_tool(name: str, arguments: dict) -> list[TextContent | ImageConte
 app = FastAPI()
 
 # ИСПРАВЛЕНО: Используем SseServerTransport
-sse = SseServerTransport("/sse")
+sse = SseServerTransport("/messages")
 
 @app.get("/sse")
 async def handle_sse(request: Request):
