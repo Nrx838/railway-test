@@ -1,9 +1,0 @@
-fastapi
-uvicorn
-google-generativeai
-python-dotenv
-pydantic
-redis
-mcp
-sse-starlette
-mcp.server.fastapi
