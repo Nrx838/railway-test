@@ -1,0 +1,977 @@
+[
+ {
+  "id": "Chair_Lower_Back_Stretch",
+  "name": "Chair Lower Back Stretch",
+  "zone": "back",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Sit tall, hold the seat with one hand",
+   "Reach the other arm up and twist toward it",
+   "Hold 15 sec, switch sides"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chair_Lower_Back_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Spinal_Stretch",
+  "name": "Spinal Stretch",
+  "zone": "back",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Sit tall, feet flat",
+   "Twist your torso, hand on the chair back",
+   "Hold 15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Spinal_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Chair_Upper_Body_Stretch",
+  "name": "Chair Upper Body Stretch",
+  "zone": "back",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Sit on the edge, grip the chair back behind you",
+   "Push chest forward, squeeze shoulder blades",
+   "Hold 20 sec"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chair_Upper_Body_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Upper_Back-Leg_Grab",
+  "name": "Upper Back-Leg Grab",
+  "zone": "back",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Sit, fold forward over your thighs",
+   "Hug your legs from underneath",
+   "Round your upper back, hold 20 sec"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Upper_Back-Leg_Grab/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Middle_Back_Stretch",
+  "name": "Middle Back Stretch",
+  "zone": "back",
+  "where": "standing",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Stand, hands on hips",
+   "Slowly twist left, then right",
+   "5 twists each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Middle_Back_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Standing_Pelvic_Tilt",
+  "name": "Standing Pelvic Tilt",
+  "zone": "back",
+  "where": "standing",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Stand, knees soft, hands on hips",
+   "Tuck pelvis under, then tilt back",
+   "10 slow tilts"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Pelvic_Tilt/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Upper_Back_Stretch",
+  "name": "Upper Back Stretch",
+  "zone": "back",
+  "where": "standing",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Clasp hands, reach forward",
+   "Round your shoulders, drop your head",
+   "Hold 20 sec"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Upper_Back_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Dynamic_Back_Stretch",
+  "name": "Dynamic Back Stretch",
+  "zone": "back",
+  "where": "standing",
+  "duration_sec": 40,
+  "difficulty": 2,
+  "steps": [
+   "Stand, arms out front",
+   "Swing arms down and back, then overhead",
+   "10 slow swings"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dynamic_Back_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Standing_Lateral_Stretch",
+  "name": "Standing Lateral Stretch",
+  "zone": "back",
+  "where": "standing",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Feet wide, knees soft",
+   "Reach one arm over your head to the side",
+   "Hold 15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Lateral_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Overhead_Stretch",
+  "name": "Overhead Stretch",
+  "zone": "back",
+  "where": "standing",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Lace fingers, palms to the ceiling",
+   "Reach up tall, shoulders down",
+   "Hold 20 sec, breathe"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Overhead_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Shoulder_Circles",
+  "name": "Shoulder Circles",
+  "zone": "shoulders",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Arms loose at your sides",
+   "Roll shoulders back in big circles",
+   "10 back, 10 forward"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Shoulder_Circles/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Shoulder_Raise",
+  "name": "Shoulder Raise",
+  "zone": "shoulders",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Lift shoulders up to your ears",
+   "Hold 2 sec, drop them hard",
+   "Repeat 10 times"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Shoulder_Raise/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Shoulder_Stretch",
+  "name": "Shoulder Stretch",
+  "zone": "shoulders",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Pull one straight arm across your chest",
+   "Hold it with the other hand",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Shoulder_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Arm_Circles",
+  "name": "Arm Circles",
+  "zone": "shoulders",
+  "where": "standing",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Arms straight out to the sides",
+   "Small circles, getting bigger",
+   "15 forward, 15 back"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Arm_Circles/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Elbow_Circles",
+  "name": "Elbow Circles",
+  "zone": "shoulders",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Fingertips on shoulders",
+   "Draw big circles with your elbows",
+   "10 each direction"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Elbow_Circles/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Side_Wrist_Pull",
+  "name": "Side Wrist Pull",
+  "zone": "shoulders",
+  "where": "standing",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Hold one wrist overhead with the other hand",
+   "Pull gently and lean to the side",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Wrist_Pull/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Upward_Stretch",
+  "name": "Upward Stretch",
+  "zone": "shoulders",
+  "where": "standing",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Hands overhead, palms together",
+   "Reach up and slightly back",
+   "Hold 20 sec"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Upward_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Elbows_Back",
+  "name": "Elbows Back",
+  "zone": "shoulders",
+  "where": "standing",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Hands on lower back, fingers down",
+   "Pull elbows back, chest out",
+   "Hold 20 sec"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Elbows_Back/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Dynamic_Chest_Stretch",
+  "name": "Dynamic Chest Stretch",
+  "zone": "shoulders",
+  "where": "standing",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Arms straight out in front",
+   "Swing them wide open, then back",
+   "10 swings"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dynamic_Chest_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Standing_Biceps_Stretch",
+  "name": "Standing Biceps Stretch",
+  "zone": "shoulders",
+  "where": "standing",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Clasp hands behind your back",
+   "Straighten arms, lift them slightly",
+   "Hold 20 sec"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Biceps_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Triceps_Stretch",
+  "name": "Triceps Stretch",
+  "zone": "shoulders",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "One hand behind your head",
+   "Pull that elbow gently with the other hand",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Tricep_Side_Stretch",
+  "name": "Tricep Side Stretch",
+  "zone": "shoulders",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Bring one arm across and over the opposite shoulder",
+   "Push the elbow gently",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Tricep_Side_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "One_Arm_Against_Wall",
+  "name": "One Arm Against Wall",
+  "zone": "shoulders",
+  "where": "wall",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Bent arm against a wall or doorframe",
+   "Turn your body away",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One_Arm_Against_Wall/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Side_Neck_Stretch",
+  "name": "Side Neck Stretch",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Shoulders relaxed",
+   "Tilt ear toward shoulder",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Neck_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Chin_To_Chest_Stretch",
+  "name": "Chin To Chest Stretch",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Sit tall",
+   "Slowly drop chin to chest",
+   "Hold 20 sec, breathe"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chin_To_Chest_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Wrist_Circles",
+  "name": "Wrist Circles",
+  "zone": "wrists",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Arms out in front",
+   "Rotate wrists in circles",
+   "10 each direction"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wrist_Circles/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Chair_Leg_Extended_Stretch",
+  "name": "Chair Leg Extended Stretch",
+  "zone": "legs",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Sit on the edge, one leg straight out",
+   "Lean forward over it, back straight",
+   "15 sec each leg"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Chair_Leg_Extended_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Calf_Stretch_Hands_Against_Wall",
+  "name": "Calf Stretch Hands Against Wall",
+  "zone": "legs",
+  "where": "wall",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Hands on a wall, one foot back",
+   "Press the back heel down",
+   "15 sec each leg"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Stretch_Hands_Against_Wall/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Calf_Stretch_Elbows_Against_Wall",
+  "name": "Calf Stretch Elbows Against Wall",
+  "zone": "legs",
+  "where": "wall",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Forearms on a wall",
+   "Lean in, heels on the floor",
+   "Hold 20 sec"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Calf_Stretch_Elbows_Against_Wall/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Standing_Hip_Flexors",
+  "name": "Standing Hip Flexors",
+  "zone": "legs",
+  "where": "standing",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Small step back with one foot",
+   "Tuck pelvis, push hips forward",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Hip_Flexors/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Standing_Hip_Circles",
+  "name": "Standing Hip Circles",
+  "zone": "legs",
+  "where": "standing",
+  "duration_sec": 40,
+  "difficulty": 2,
+  "steps": [
+   "Hold the desk, stand on one leg",
+   "Circle the other knee out wide",
+   "8 circles each leg"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Hip_Circles/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Front_Leg_Raises",
+  "name": "Front Leg Raises",
+  "zone": "legs",
+  "where": "standing",
+  "duration_sec": 40,
+  "difficulty": 2,
+  "steps": [
+   "Hold the desk with one hand",
+   "Swing one leg forward and back",
+   "10 swings each leg"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Front_Leg_Raises/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Side_Leg_Raises",
+  "name": "Side Leg Raises",
+  "zone": "legs",
+  "where": "standing",
+  "duration_sec": 40,
+  "difficulty": 2,
+  "steps": [
+   "Hold the desk, stand on one leg",
+   "Swing the other leg side to side",
+   "10 swings each leg"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Leg_Raises/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Knee_Circles",
+  "name": "Knee Circles",
+  "zone": "legs",
+  "where": "standing",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Feet together, hands on knees",
+   "Circle knees slowly",
+   "10 each direction"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Knee_Circles/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Ankle_Circles",
+  "name": "Ankle Circles",
+  "zone": "legs",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Lift one foot",
+   "Draw circles with your toes",
+   "10 each direction, each foot"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Ankle_Circles/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Sit_Squats",
+  "name": "Sit Squats",
+  "zone": "legs",
+  "where": "standing",
+  "duration_sec": 40,
+  "difficulty": 2,
+  "steps": [
+   "Stand in front of your chair",
+   "Sit down slowly, stand right back up",
+   "10 reps"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Sit_Squats/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Standing_Toe_Touches",
+  "name": "Standing Toe Touches",
+  "zone": "legs",
+  "where": "standing",
+  "duration_sec": 30,
+  "difficulty": 2,
+  "steps": [
+   "Feet together, knees soft",
+   "Reach down toward your toes",
+   "Hold 20 sec"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Toe_Touches/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Standing_Soleus_And_Achilles_Stretch",
+  "name": "Standing Soleus And Achilles Stretch",
+  "zone": "legs",
+  "where": "standing",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "One foot slightly in front",
+   "Bend both knees, heels down",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Soleus_And_Achilles_Stretch/1.jpg",
+  "source": "free-exercise-db"
+ },
+ {
+  "id": "Chin_Tucks",
+  "name": "Chin Tucks",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Look straight ahead",
+   "Pull your chin back, make a double chin",
+   "Hold 3 sec, 10 reps"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Chin_Tucks.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Neck_Rotations",
+  "name": "Neck Rotations",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Sit tall",
+   "Turn your head slowly left, then right",
+   "5 each side, no rushing"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Neck_Rotations.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Upper_Trap_Stretch",
+  "name": "Upper Trap Stretch",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Hand over the top of your head",
+   "Gently pull your ear to your shoulder",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Upper_Trap_Stretch.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Armpit_Sniff",
+  "name": "Levator Scapulae Stretch",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Turn your head 45° to one side",
+   "Look down toward your armpit",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Armpit_Sniff.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Eyes_20_20_20",
+  "name": "20-20-20 Rule",
+  "zone": "eyes",
+  "where": "seated",
+  "duration_sec": 20,
+  "difficulty": 1,
+  "steps": [
+   "Find something about 20 feet away",
+   "Look at it for 20 seconds",
+   "Blink slowly"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Eyes_20_20_20.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Eyes_Palming",
+  "name": "Palming",
+  "zone": "eyes",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Rub your palms until warm",
+   "Cup them over closed eyes",
+   "Breathe for 30 sec"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Eyes_Palming.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Eyes_Circles",
+  "name": "Eye Circles",
+  "zone": "eyes",
+  "where": "seated",
+  "duration_sec": 20,
+  "difficulty": 1,
+  "steps": [
+   "Keep your head still",
+   "Roll your eyes in a big circle",
+   "5 each direction"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Eyes_Circles.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Eyes_Near_Far",
+  "name": "Near-Far Focus",
+  "zone": "eyes",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Hold your thumb 10 inches away",
+   "Focus on it, then on something far",
+   "Switch 10 times"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Eyes_Near_Far.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Eyes_Blink_Reset",
+  "name": "Blink Reset",
+  "zone": "eyes",
+  "where": "seated",
+  "duration_sec": 20,
+  "difficulty": 1,
+  "steps": [
+   "Blink fast for 10 seconds",
+   "Close your eyes for 10 seconds",
+   "Repeat twice"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Eyes_Blink_Reset.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Eyes_Figure_Eight",
+  "name": "Figure Eight",
+  "zone": "eyes",
+  "where": "seated",
+  "duration_sec": 20,
+  "difficulty": 1,
+  "steps": [
+   "Imagine a big 8 on the wall",
+   "Trace it slowly with your eyes",
+   "5 times, then reverse"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Eyes_Figure_Eight.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Wrist_Flexor_Stretch",
+  "name": "Wrist Flexor Stretch",
+  "zone": "wrists",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Arm straight, palm up",
+   "Pull fingers down and back",
+   "15 sec each hand"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Wrist_Flexor_Stretch.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Wrist_Extensor_Stretch",
+  "name": "Wrist Extensor Stretch",
+  "zone": "wrists",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Arm straight, palm down",
+   "Pull the back of your hand toward you",
+   "15 sec each hand"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Wrist_Extensor_Stretch.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Prayer_Stretch",
+  "name": "Prayer Stretch",
+  "zone": "wrists",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Palms together in front of your chest",
+   "Lower hands slowly, keep palms pressed",
+   "Hold 20 sec"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Prayer_Stretch.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Finger_Spreads",
+  "name": "Finger Spreads",
+  "zone": "wrists",
+  "where": "seated",
+  "duration_sec": 20,
+  "difficulty": 1,
+  "steps": [
+   "Spread your fingers as wide as you can",
+   "Hold 3 sec, then relax",
+   "10 reps"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Finger_Spreads.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Fist_Release",
+  "name": "Fist Clench & Release",
+  "zone": "wrists",
+  "where": "seated",
+  "duration_sec": 20,
+  "difficulty": 1,
+  "steps": [
+   "Make a tight fist",
+   "Explode fingers open",
+   "10 reps, then shake it out"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Fist_Release.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Scalene_Stretch",
+  "name": "Scalene Stretch",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Hand flat on your collarbone",
+   "Tilt your head back and away",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Scalene_Stretch.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "SCM_Stretch",
+  "name": "Front Neck Stretch",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Hand on your collarbone",
+   "Turn your head away and look up",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/SCM_Stretch.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Neck_Flexion",
+  "name": "Neck Flexion Stretch",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Sit tall, hands on knees",
+   "Drop your chin toward your chest",
+   "Hold 20 sec"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Neck_Flexion.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Neck_Extension",
+  "name": "Neck Extension Stretch",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Sit tall",
+   "Slowly look up at the ceiling",
+   "Hold 15 sec, come back slowly"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Neck_Extension.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Lateral_Neck_Stretch",
+  "name": "Lateral Neck Stretch",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Hands on knees",
+   "Ear toward shoulder, no hands",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Lateral_Neck_Stretch.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Neck_Isometric",
+  "name": "Neck Isometric Hold",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 2,
+  "steps": [
+   "Hand on the side of your head",
+   "Push your head into it, don't move",
+   "10 sec each side, twice"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Neck_Isometric.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Shoulder_Rolls_Forward",
+  "name": "Shoulder Rolls (Forward)",
+  "zone": "shoulders",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Arms loose",
+   "Roll shoulders forward in big circles",
+   "10 slow rolls"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Shoulder_Rolls_Forward.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Shoulder_Rolls_Backward",
+  "name": "Shoulder Rolls (Backward)",
+  "zone": "shoulders",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Arms loose",
+   "Roll shoulders back in big circles",
+   "10 slow rolls"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Shoulder_Rolls_Backward.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Shoulder_Blade_Squeeze",
+  "name": "Shoulder Blade Squeeze",
+  "zone": "shoulders",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Sit tall, arms by your sides",
+   "Squeeze shoulder blades together",
+   "Hold 5 sec, 8 reps"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Shoulder_Blade_Squeeze.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Chest_Opener",
+  "name": "Chest Opener",
+  "zone": "shoulders",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Arms wide, palms up",
+   "Open your chest, look slightly up",
+   "Hold 20 sec"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Chest_Opener.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Seated_Upper_Back_Stretch",
+  "name": "Seated Upper Back Stretch",
+  "zone": "back",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Clasp hands, arms straight out",
+   "Round your back, tuck your head",
+   "Hold 20 sec"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Seated_Upper_Back_Stretch.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Side_Reach",
+  "name": "Seated Side Reach",
+  "zone": "back",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "One hand on your knee",
+   "Reach the other arm up and over",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Side_Reach.jpg",
+  "source": "custom"
+ }
+]
