@@ -581,7 +581,7 @@
    "Pull your chin back, make a double chin",
    "Hold 3 sec, 10 reps"
   ],
-  "image_url": null,
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Chin_Tucks.jpg",
   "source": "custom"
  },
  {
@@ -596,7 +596,7 @@
    "Turn your head slowly left, then right",
    "5 each side, no rushing"
   ],
-  "image_url": null,
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Neck_Rotations.jpg",
   "source": "custom"
  },
  {
@@ -611,12 +611,12 @@
    "Gently pull your ear to your shoulder",
    "15 sec each side"
   ],
-  "image_url": null,
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Upper_Trap_Stretch.jpg",
   "source": "custom"
  },
  {
   "id": "Armpit_Sniff",
-  "name": "Look-Into-Your-Armpit Stretch",
+  "name": "Levator Scapulae Stretch",
   "zone": "neck",
   "where": "seated",
   "duration_sec": 40,
@@ -626,7 +626,7 @@
    "Look down toward your armpit",
    "15 sec each side"
   ],
-  "image_url": null,
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Armpit_Sniff.jpg",
   "source": "custom"
  },
  {
@@ -792,6 +792,186 @@
    "10 reps, then shake it out"
   ],
   "image_url": null,
+  "source": "custom"
+ },
+ {
+  "id": "Scalene_Stretch",
+  "name": "Scalene Stretch",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Hand flat on your collarbone",
+   "Tilt your head back and away",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Scalene_Stretch.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "SCM_Stretch",
+  "name": "Front Neck Stretch",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "Hand on your collarbone",
+   "Turn your head away and look up",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/SCM_Stretch.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Neck_Flexion",
+  "name": "Neck Flexion Stretch",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Sit tall, hands on knees",
+   "Drop your chin toward your chest",
+   "Hold 20 sec"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Neck_Flexion.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Neck_Extension",
+  "name": "Neck Extension Stretch",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Sit tall",
+   "Slowly look up at the ceiling",
+   "Hold 15 sec, come back slowly"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Neck_Extension.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Lateral_Neck_Stretch",
+  "name": "Lateral Neck Stretch",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Hands on knees",
+   "Ear toward shoulder, no hands",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Lateral_Neck_Stretch.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Neck_Isometric",
+  "name": "Neck Isometric Hold",
+  "zone": "neck",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 2,
+  "steps": [
+   "Hand on the side of your head",
+   "Push your head into it, don't move",
+   "10 sec each side, twice"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Neck_Isometric.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Shoulder_Rolls_Forward",
+  "name": "Shoulder Rolls (Forward)",
+  "zone": "shoulders",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Arms loose",
+   "Roll shoulders forward in big circles",
+   "10 slow rolls"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Shoulder_Rolls_Forward.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Shoulder_Rolls_Backward",
+  "name": "Shoulder Rolls (Backward)",
+  "zone": "shoulders",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Arms loose",
+   "Roll shoulders back in big circles",
+   "10 slow rolls"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Shoulder_Rolls_Backward.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Shoulder_Blade_Squeeze",
+  "name": "Shoulder Blade Squeeze",
+  "zone": "shoulders",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Sit tall, arms by your sides",
+   "Squeeze shoulder blades together",
+   "Hold 5 sec, 8 reps"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Shoulder_Blade_Squeeze.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Chest_Opener",
+  "name": "Chest Opener",
+  "zone": "shoulders",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Arms wide, palms up",
+   "Open your chest, look slightly up",
+   "Hold 20 sec"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Chest_Opener.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Seated_Upper_Back_Stretch",
+  "name": "Seated Upper Back Stretch",
+  "zone": "back",
+  "where": "seated",
+  "duration_sec": 30,
+  "difficulty": 1,
+  "steps": [
+   "Clasp hands, arms straight out",
+   "Round your back, tuck your head",
+   "Hold 20 sec"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Seated_Upper_Back_Stretch.jpg",
+  "source": "custom"
+ },
+ {
+  "id": "Side_Reach",
+  "name": "Seated Side Reach",
+  "zone": "back",
+  "where": "seated",
+  "duration_sec": 40,
+  "difficulty": 1,
+  "steps": [
+   "One hand on your knee",
+   "Reach the other arm up and over",
+   "15 sec each side"
+  ],
+  "image_url": "https://raw.githubusercontent.com/Nrx838/railway-test/coach-gary/img/Side_Reach.jpg",
   "source": "custom"
  }
 ]
