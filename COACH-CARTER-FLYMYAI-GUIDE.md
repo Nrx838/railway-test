@@ -2,7 +2,7 @@
 
 Полный разбор кейса: идея, контент, логика, два варианта сборки (полностью на агентах FlyMyAI и рабочий: бэкенд на Fly.io + Jev через FlyMyAI), грабли, цены, медиа и промо-ролик. Документ написан так, чтобы по нему можно было повторить всё с нуля.
 
-> **Состояние на 25.09.2026.** Рабочая архитектура — вариант B: Python-бот на **Fly.io** плюс Jev через API FlyMyAI. На Fly.io бот поднимается одной командой, `bot/deploy-fly.sh`. На момент написания он ещё работает локально: нужен вход в аккаунт Fly. Вариант A, полностью на агентах FlyMyAI, собран и протестирован, но **выключен из-за цены**: $0.15–0.25 за запуск. Код лежит на GitHub: `Nrx838/railway-test`, ветка `coach-gary`.
+> **Итог обсуждения (25.09.2026).** Рабочая архитектура — вариант B: Python-бот с **бэкендом на Fly.io** плюс Jev через API FlyMyAI. Вариант A, полностью на агентах FlyMyAI, собран и протестирован, но **выключен из-за цены**: $0.15–0.25 за запуск. Код лежит на GitHub: `Nrx838/railway-test`, ветка `coach-gary`.
 
 ---
 
@@ -53,7 +53,7 @@
 | Код для агентов FlyMyAI | `gary_pick.py`, `gary_reply.py` в корне ветки `coach-gary` (закреплённые коммиты, см. §7) |
 | Библиотека реплик | `bot/reactions.json` (671 реплика) · источник `drill_lines.py` |
 | Пул упражнений | `bot/exercises.json` (65 упражнений) · сборка `build_pool.py` · картинки `img/` |
-| Бэкенд Fly.io | `bot/Dockerfile`, `bot/fly.toml`, `bot/deploy-fly.sh` · локально для разработки `bot/run.sh` |
+| Бэкенд Fly.io | `bot/Dockerfile`, `bot/fly.toml` · локально для разработки `bot/run.sh` |
 | Промо-ролик | `/home/nrx83/AI/remotion/my-video/out/coach-carter-v4.mp4` (1:14, 1920×1080) |
 | Обложка для X | `/home/nrx83/AI/remotion/my-video/out/coach-carter-cover.jpg` |
 | Сценарий ролика | `/home/nrx83/AI/remotion/coach-carter-video-final.md` |
@@ -364,7 +364,7 @@ Telegram ⇄ Fly.io machine: bot.py (python-telegram-bot 21.6, long polling, Job
 - `coach.py` — логика без Telegram и сети, покрыта симуляцией недели;
 - `reactions.json`, `exercises.json` — контент;
 - `requirements.txt`: `python-telegram-bot[job-queue]==21.6`, `httpx>=0.27`, `tzdata`;
-- `Dockerfile`, `fly.toml`, `deploy-fly.sh` — бэкенд на Fly.io;
+- `Dockerfile`, `fly.toml` — бэкенд на Fly.io;
 - `.env.example`, `run.sh` — локальный запуск для разработки.
 
 ### Переменные окружения
@@ -381,9 +381,16 @@ cp bot/.env.example bot/.env    # вписать токен и ключ
 bot/run.sh
 ```
 
-### Деплой на Fly.io
+### Бэкенд на Fly.io
+- **Машина:** одна `shared-cpu-1x` на 256 MB в регионе `iad`, ~$1.94/мес. Больше не нужно: бот лёгкий, а постоянно работающий процесс даёт мгновенные ответы на кнопки.
+- **Без HTTP-сервиса:** бот сам опрашивает Telegram (long polling), входящие порты не нужны.
+- **Диск:** том `gary_data` на 1 ГБ, смонтирован в `/data`, база `/data/gary.db` (~$0.15/мес). Пользователи и статистика переживают перезапуски и деплои.
+- **Секреты:** `TELEGRAM_TOKEN` и `FLYMYAI_API_KEY` лежат в Fly secrets, а не в образе и не в git.
+- **Ровно одна машина.** Telegram отдаёт обновления только одному процессу на токен, поэтому масштабирование `count 1` и никакой копии бота локально.
+- **Образ:** `python:3.12-slim` + `requirements.txt` + `bot.py`, `coach.py`, `exercises.json`, `reactions.json`. Собран и проверен локально: внутри импортируются `coach` и `telegram`, в пуле 65 упражнений.
+
+`fly.toml`:
 ```toml
-# fly.toml
 app = "coach-carter-bot"
 primary_region = "iad"
 [env]
@@ -395,8 +402,9 @@ primary_region = "iad"
   size = "shared-cpu-1x"
   memory = "256mb"
 ```
+
+`Dockerfile`:
 ```dockerfile
-# Dockerfile
 FROM python:3.12-slim
 WORKDIR /app
 COPY requirements.txt .
@@ -404,28 +412,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY bot.py coach.py exercises.json reactions.json ./
 CMD ["python", "bot.py"]
 ```
-Одной командой, всё делает скрипт `deploy-fly.sh`:
-```bash
-curl -L https://fly.io/install.sh | sh
-```
-```bash
-cd bot && ./deploy-fly.sh coach-carter-bot
-```
-Что делает скрипт:
-1. Проверяет `flyctl` и вход в аккаунт (если не вошёл, открывает `fly auth login`).
-2. Останавливает локального бота: Telegram отдаёт обновления только одному опрашивающему процессу.
-3. Прописывает имя приложения в `fly.toml` и создаёт приложение.
-4. Создаёт том `gary_data` на 1 ГБ в регионе `iad`.
-5. Переносит `TELEGRAM_TOKEN` и `FLYMYAI_API_KEY` из `.env` в **Fly secrets** (`fly secrets import`). Токены не попадают ни в образ, ни в git.
-6. Делает `fly deploy --ha=false` и `fly scale count 1`: ровно одна машина, иначе два процесса будут опрашивать один токен.
 
-После деплоя:
-- логи: `fly logs -a coach-carter-bot`;
-- статус: `fly status -a coach-carter-bot`;
-- обновить код: `fly deploy -a coach-carter-bot`;
-- база переживает перезапуски и деплои, потому что лежит на томе.
-
-Образ собирается и проверен локально: внутри импортируются `coach` и `telegram`, в пуле 65 упражнений.
+Стандартные шаги Fly.io: `fly launch` → `fly volumes create gary_data` → `fly secrets set` → `fly deploy` → `fly scale count 1`.
 
 ### Проверено
 - **Симуляция рабочей недели:** 30 напоминаний, подряд ни одного повтора, все подписи меньше 1024 символов.
@@ -574,5 +562,5 @@ cd my-video && npx remotion render src/index.ts CoachCarterPromo out/coach-carte
 2. Ключ API FlyMyAI (app.flymy.ai/profile).
 3. `git clone -b coach-gary https://github.com/Nrx838/railway-test` → папка `bot/`.
 4. `.env` с `TELEGRAM_TOKEN` и `FLYMYAI_API_KEY`. По желанию сначала `run.sh` локально: проверить `/start`, `/stretch`, кнопки, свободный текст, `/cost`.
-5. Бэкенд на Fly.io: установить `flyctl` и запустить `./deploy-fly.sh` (§8). Скрипт сам остановит локальную копию.
+5. Бэкенд на Fly.io (§8): одна машина, том под базу, секреты. Локальную копию бота перед этим остановить.
 6. Для варианта на агентах: коннекторы (§7.1) → агенты с промптами из §7.3–7.4 (подставить свой `chat_id`) → тестовые запуски → `schedule_agent`. Следить за балансом.
