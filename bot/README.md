@@ -13,3 +13,12 @@ Root directory `bot/`, start command `python bot.py` (railway.json). Variables: 
 
 Commands: /start /stretch /stats /pause /resume, and /cost for total Jev spend.
 Exercise photos: free-exercise-db (public domain) + generated set in `../img`.
+
+## Fly.io
+    fly launch --no-deploy --copy-config          # pick a unique app name if coach-carter-bot is taken
+    fly volumes create gary_data --size 1 --region iad
+    fly secrets set TELEGRAM_TOKEN=... FLYMYAI_API_KEY=...
+    fly deploy
+    fly scale count 1                             # exactly one poller per bot token
+
+Stop any local copy first: Telegram delivers updates to only one poller per token.

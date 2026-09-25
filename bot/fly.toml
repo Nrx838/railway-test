@@ -1,0 +1,15 @@
+# Coach Carter bot on Fly.io: one tiny always-on machine (shared-cpu-1x, 256MB ≈ $1.94/mo)
+# plus a 1GB volume for the SQLite database. No HTTP service: the bot long-polls Telegram.
+app = "coach-carter-bot"
+primary_region = "iad"
+
+[env]
+  DB_PATH = "/data/gary.db"
+
+[[mounts]]
+  source = "gary_data"
+  destination = "/data"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "256mb"
