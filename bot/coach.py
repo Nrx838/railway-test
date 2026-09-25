@@ -1,4 +1,4 @@
-"""Coach Gary core logic: pure functions over a per-user state dict. No Telegram, no network."""
+"""Coach Carter core logic: pure functions over a per-user state dict. No Telegram, no network."""
 import json
 import random
 import re
@@ -15,14 +15,17 @@ NO_REPEAT = 15
 SLOTS = [(10, 0, "back"), (11, 30, "shoulders"), (13, 0, "neck"), (14, 30, "eyes"), (16, 0, "wrists"), (17, 30, "legs")]
 WEEKLY_SUMMARY = (4, 18, 30)  # Friday 18:30
 
-# Inline buttons under every reminder: callback code -> (label, intent, reason)
-BUTTONS = {
+# Two independent questions under every reminder: callback code -> (label, intent, reason)
+BUTTONS = {  # did you do the stretch?
     "done": ("✅ Done", "done", "none"),
-    "water": ("💧 Drank water", "water", "none"),
-    "call": ("📞 Was on a call", "skipped", "meeting"),
     "later": ("⏳ Later", "later", "none"),
-    "lazy": ("😴 Too lazy", "skipped", "lazy"),
+    "call": ("📞 Call", "skipped", "meeting"),
+    "lazy": ("😴 Lazy", "skipped", "lazy"),
     "skip": ("🙅 Skip", "skipped", "none"),
+}
+WATER_BUTTONS = {  # did you drink?
+    "yes": ("💧 Drank a glass", "water", "none"),
+    "no": ("🚱 Not yet", "water_no", "none"),
 }
 
 
@@ -51,7 +54,18 @@ def is_weekly_summary(now):
     return (now.weekday(), now.hour, now.minute) == WEEKLY_SUMMARY
 
 
+SPICY = "[x] "
+
+
+def _allowed(state, items):
+    """Lines tagged [x] (profanity/roast) only in spicy mode, which is the default."""
+    if state.get("mode", "spicy") == "spicy":
+        return [l.removeprefix(SPICY) for l in items]
+    return [l for l in items if not l.startswith(SPICY)]
+
+
 def _rotate(state, key, items):
+    items = _allowed(state, items)
     c = state["cursors"].get(key, 0)
     state["cursors"][key] = c + 1
     return items[c % len(items)]
@@ -82,7 +96,7 @@ def build_reminder(state, now, slot=None):
 
     lines = ([nag, ""] if nag else []) + [intro, "", "<b>" + ex["name"] + "</b>"]
     lines += [f"{n}. {s}" for n, s in enumerate(ex["steps"], 1)]
-    lines += [f"⏱ {ex['duration_sec']} sec", "", water]
+    lines += [f"⏱ {ex['duration_sec']} sec", "", water, "", "<i>👇 Stretch done? Water in?</i>"]
 
     state["recent"] = (state["recent"] + [ex["id"]])[-NO_REPEAT:]
     state["sent"] += 1
@@ -100,23 +114,39 @@ def jev_request(text, state):
 
 
 def button_answers(code):
-    _, intent, reason = BUTTONS[code]
+    _, intent, reason = BUTTONS.get(code) or WATER_BUTTONS[code]
     return {"intent": {"choice": intent, "confidence": 1}, "reason": {"choice": reason},
             "tone": {"choice": "neutral"}, "pain_mentioned": {"noul": 0}, "wants_pause": {"noul": 0}}
 
 
+# Short replies Carter himself suggests ("+" / "-"): no model call needed.
+QUICK = {
+    "done": ("+", "done", "did it", "did", "yes", "yep", "ok", "✅", "👍"),
+    "yes": ("water", "drank", "💧", "drank water"),
+    "skip": ("-", "no", "nope", "not done", "not", "nah", "skip", "skipped", "👎"),
+}
+
+
+def quick_answers(text):
+    t = text.strip().lower().rstrip("!.")
+    for code, words in QUICK.items():
+        if t in words:
+            return button_answers(code)
+    return None
+
+
 def _pick_line(state, key):
     """Cycle a bucket through a fixed shuffle so nothing repeats until the bucket is exhausted."""
-    lines = LIB["reactions"][key]
+    lines = _allowed(state, LIB["reactions"][key])
     order = list(range(len(lines)))
-    random.Random(key).shuffle(order)
+    random.Random(key + state.get("mode", "spicy")).shuffle(order)
     c = state["reply_cursors"].get(key, 0)
     state["reply_cursors"][key] = c + 1
     return lines[order[c % len(lines)]]
 
 
 def react(state, answers, text, now):
-    """Turn classified answers into Gary's reply. Mutates state. Returns (reply, bucket_key)."""
+    """Turn classified answers into Carter's reply. Mutates state. Returns (reply, bucket_key)."""
     _roll_day(state, now)
     intent = answers["intent"]["choice"]
     conf = answers["intent"].get("confidence", 1)
@@ -147,6 +177,8 @@ def react(state, answers, text, now):
     elif intent == "water":
         state["water"] += 1
         key = "water.goal_hit" if state["water"] == GOAL else "water"
+    elif intent == "water_no":
+        key = "water.no"
     elif intent == "partial":
         state["done"] += 1
         key = "partial"
@@ -160,6 +192,8 @@ def react(state, answers, text, now):
         else:
             key = next(k for k in ("skipped.%s.%s" % (reason, tone), "skipped." + reason,
                                    "skipped." + tone, "skipped.none") if k in reactions)
+    elif tone == "annoyed" and intent in ("complaint", "banter", "other"):
+        key = "rude"
     elif intent in reactions:
         key = intent
     else:
@@ -171,7 +205,8 @@ def react(state, answers, text, now):
     for k, v in values.items():
         line = line.replace("{" + k + "}", str(v))
 
-    if state.get("last") and intent not in ("banter", "question", "greeting"):
+    # Only a stretch answer closes the stretch question; water is tracked on its own.
+    if state.get("last") and intent not in ("banter", "question", "greeting", "water", "water_no"):
         state["last"]["replied"] = True
     state["log"].append([now.isoformat()[:16], intent, reason])
     state["log"] = state["log"][-80:]
@@ -183,6 +218,7 @@ def weekly_summary(state, now):
     week = [r for r in state["log"] if (now - datetime.fromisoformat(r[0]).replace(tzinfo=now.tzinfo)).days < 7]
     done = sum(r[1] in ("done", "partial") for r in week)
     water = sum(r[1] == "water" for r in week)
+    dry = sum(r[1] == "water_no" for r in week)
     ignored = sum(r[1] == "ignored" for r in week)
     skipped = sum(r[1] == "skipped" for r in week)
     reasons = {}
@@ -190,8 +226,9 @@ def weekly_summary(state, now):
         if r[1] == "skipped" and r[2] != "none":
             reasons[r[2]] = reasons.get(r[2], 0) + 1
     top = max(reasons, key=reasons.get) if reasons else None
-    lines = ["📋 <b>Coach Gary's weekly report</b>", "",
-             f"✅ Stretches done: {done}", f"🙅 Skipped: {skipped}", f"👻 Ghosted: {ignored}", f"💧 Water logged: {water}"]
+    lines = ["📋 <b>Coach Carter's weekly report</b>", "",
+             "<b>Stretches</b>", f"✅ Done: {done}", f"🙅 Skipped: {skipped}", f"👻 Ghosted: {ignored}", "",
+             "<b>Water</b>", f"💧 Glasses logged: {water}", f"🚱 Dry check-ins: {dry}"]
     if top:
         label = {"meeting": "meetings", "lazy": "pure laziness", "busy": "being 'busy'", "forgot": "forgetting",
                  "tired": "being tired", "eating": "snacks", "away": "not at your desk"}.get(top, top)

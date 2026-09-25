@@ -1,4 +1,4 @@
-# Coach Gary bot
+# Coach Carter bot
 
 Grumpy gym-teacher Telegram bot: 6 desk stretches per workday, water nagging, excuses judged by
 FlyMyAI Jev (typed classifier, ~$0.00003 per free-text reply). Buttons need no model call at all.
